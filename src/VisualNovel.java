@@ -4,17 +4,16 @@ import java.util.Scanner;
 public class VisualNovel {
 
     private static final List<String> dialogs = List.of(
-        "Hello, welcome to our visual novel.",
-        "I hope you enjoy the story.",
-        "Let's begin the adventure!"
-    );
+            "Hello, welcome to our visual novel.",
+            "I hope you enjoy the story.",
+            "Let's begin the adventure!");
 
     private static int currentDialogIndex = 0;
     private static boolean waitForEnter = true;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         while (currentDialogIndex < dialogs.size()) {
             String dialog = dialogs.get(currentDialogIndex);
             displayDialog(dialog, scanner);
@@ -26,7 +25,7 @@ public class VisualNovel {
 
     private static void displayDialog(String dialog, Scanner scanner) {
         waitForEnter = true;
-        
+
         Thread typingThread = new Thread(() -> typeText(dialog));
         typingThread.start();
 
@@ -39,11 +38,11 @@ public class VisualNovel {
         }
 
         waitForEnter = true;
-        
+
         if (scanner.hasNextLine()) {
             scanner.nextLine();
         }
-        
+
         clearConsole();
     }
 

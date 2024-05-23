@@ -1,0 +1,5 @@
+Narrator: Hello, welcome to our visual novel.
+Narrator: I hope you enjoy the story.
+Narrator: Let's begin the adventure!
+Character A: This is an example of a dialogue in another branch.
+Character B: And here's a response from another character.
